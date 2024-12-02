@@ -1,7 +1,7 @@
 use std::error::Error;
 use std::fs::read_to_string;
 
-fn main() -> Result<(), Box<dyn Error + 'static>> {
+fn main() -> Result<(), Box<dyn Error>> {
     let input = read_to_string("../input")?;
 
     let mut safe = 0;

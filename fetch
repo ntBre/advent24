@@ -12,12 +12,16 @@ curl --cookie $(cat ~/.config/aoc/cookie) $url/input > $dir/input
 main=$dir/src/main.rs
 
 cat > $main <<INP
-use std::fs::read_to_string;
-use std::process::exit;
 use std::error::Error;
+use std::fs::read_to_string;
 
-fn main() -> Box<dyn Error> {
+fn main() -> Result<(), Box<dyn Error>> {
    let input = read_to_string("../input")?;
+
+   let mut res = 0;
+   for line in input.lines() {
+   	   
+   }
 
    println!("{}", res);
 
